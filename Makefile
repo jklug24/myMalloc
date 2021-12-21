@@ -1,5 +1,5 @@
 .PHONY: all
-all: git-commit tests examples
+all: git-commit
 
 .PHONY: git-commit
 git-commit:
