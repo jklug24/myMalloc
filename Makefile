@@ -4,7 +4,12 @@ all: git-commit
 .PHONY: git-commit
 git-commit:
 	git add *.c Makefile >> .local.git.out  || echo
+	git add *.h Makefile >> .local.git.out  || echo
 	git commit -a -m 'Commit' >> .local.git.out || echo
+
+.PHONY: push
+push:
+	git push -u origin main
 
 .PHONY: tests
 tests:
