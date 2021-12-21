@@ -3,10 +3,8 @@ all: git-commit tests examples
 
 .PHONY: git-commit
 git-commit:
-	git checkout master >> .local.git.out || echo
 	git add *.c Makefile >> .local.git.out  || echo
 	git commit -a -m 'Commit' >> .local.git.out || echo
-	git push origin master
 
 .PHONY: tests
 tests:
